@@ -7,14 +7,24 @@ This research focuses on using an adaptable reservoir Computing (RC) model to pr
 Compilation of the given codes requires MATLAB version R2020b and Fortran.
 
 # Codes and results
-adaptable_rc_spatiotemporal.m can be run to obtain predictions of adaptable RC on NMF-reduced data.
+The script adaptable_rc_spatiotemporal.m is executed to obtain predictions using adaptable reservoir computing on NMF-reduced data.
 
-The folder data generation contains two subfolders that contain code for generating spatial patterns for the continuous model and the discrete cellular automata model.
 
-numerical_data.f90 (contained in the subfolder VT) can simulate the sequence of spatial patterns along the bifurcation gradient for all other parameters kept fixed for the vegetation turbidity model.
-The  code can be modified to obtain data for other continuous models by changing the deterministic equation and corresponding parameters.
+The data_generation folder contains two subfolders with code for generating spatial patterns for:
+1. continuous models, and
+2. Discrete cellular automata models.
 
-The code ca.m in the subfolder ca can simulate the sequence of spatial patterns along the bifurcation gradient for the discrete (cellular automata) model.
+Within the VT subfolder, the file numerical_data.f90 simulates sequences of spatial patterns along a bifurcation gradient while keeping other parameters fixed for the vegetation–turbidity model.
+This code can be adapted to other continuous models by modifying the deterministic equations and the associated parameters.
+
+This code is implemented in Fortran to achieve faster performance for multiple realizations. It can also be equivalently written in MATLAB or Python.
+
+In the ca subfolder, the script ca.m generates sequences of spatial patterns along the bifurcation gradient for the discrete (cellular automata) model.
+
+
+
+
+
 
 
 
